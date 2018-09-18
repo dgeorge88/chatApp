@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>ChatApp</title>
+  <!-- Firebase library -->
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Homebrews -->
+  <link rel="stylesheet" href="./CSS/appStyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  <script src="./JS/script.js"></script>
+</head>
+
+<body>
+  <!-- start of App -->
+  <div data-role="page" id="home">
+
+    <div id="appHeader" data-role="header" data-theme="b" data-position="fixed">
+      <h1>
+        <div id="Logo">ChatApp</div>
+        <div id="userWelcome"></div>
+      </h1>
+      <button id="userSignIn" onclick="signIn();" class="ui-btn ui-icon-user ui-btn-icon-left">Sign in</button>
+      <button id="userSignOut" href="auth.html" onclick="signOut();" class="ui-btn ui-icon-delete ui-btn-icon-left">Sign Out</button>
+
+    </div>
+
+<div data-role="content" class="appContent fullScreen">
+
+
+
+  <div id="msgOut"></div>
+
+    </div>
+
+    <!-- end of Chat page -->
+    <div id="appFooter" data-role="footer" data-theme="b" data-position="fixed">
+      <input data-wrapper-class="msgInput" id="newMessage" type="text" placeholder="Type a message..."  />
+      <button type="submit" id="SubmitButton" onclick="submitClick()" class="ui-btn ui-icon-user ui-btn-icon-left">Send</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
